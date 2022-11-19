@@ -1,5 +1,6 @@
 package com.app.githubjavapop.Requests
 
+import com.app.githubjavapop.BuildConfig
 import com.app.githubjavapop.Models.PullRequest
 import com.app.githubjavapop.Models.Repository
 import okhttp3.OkHttpClient
@@ -9,7 +10,7 @@ import org.json.JSONObject
 
 object GeneralRequests {
 
-    val token = "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"
+    val token = BuildConfig.API_TOKEN;
 
     fun getRepositories(repositories: MutableList<Repository>, page: Int, callBack: (List<Repository>) -> Unit) {
 
